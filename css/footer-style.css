@@ -1,0 +1,114 @@
+.footer {
+	background-color: #f0f0f0;
+	padding: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.footer-nav,
+.footer-social,
+.footer-legal {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.footer-nav__item,
+.footer-social__item,
+.footer-legal__item {
+	margin-bottom: 10px;
+}
+
+.footer-nav__link,
+.footer-social__link,
+.footer-legal__link {
+	color: #555;
+	text-decoration: none;
+	transition: color 0.3s;
+}
+
+.footer-nav__link:hover,
+.footer-social__link:hover,
+.footer-legal__link:hover {
+	color: #000;
+	text-decoration: underline;
+}
+
+.footer-legal__link.empty {
+	display: none;
+}
+
+.footer-legal__item__icp {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.footer-legal__link {
+	margin-right: 10px;
+}
+
+.image-icp {
+	width: 20px;
+	height: 20px;
+	margin-right: 5px;
+}
+
+.sr-only {
+	position: absolute;
+	left: -9999px;
+}
+
+/* Додаткові стилі для соціальних іконок */
+.footer-social__item {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.footer-social__link {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 24px;
+	height: 24px;
+	background-color: #fff;
+	border-radius: 50%;
+	transition: background-color 0.3s;
+}
+
+.footer-social__link:hover {
+	background-color: #f0f0f0;
+}
+
+.hsbc-twitter {
+	/* Стилі для іконки Twitter */
+}
+
+.hsbc-linkedin {
+	/* Стилі для іконки LinkedIn */
+}
+
+.hsbc-instagram {
+	/* Стилі для іконки Instagram */
+}
+
+.hsbc-facebook {
+	/* Стилі для іконки Facebook */
+}
+
+.hsbc-youtube {
+	/* Стилі для іконки YouTube */
+}
+
+/* Додаткові стилі для правової інформації */
+.footer-legal__item {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.footer-legal__item:last-child {
+	margin-right: 0;
+}
+
+/* Додайте інші стилі за потреби */
