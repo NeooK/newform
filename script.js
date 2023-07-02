@@ -5,7 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
     form.addEventListener("submit", function (event) {
         if (depositRadio.checked) {
             event.preventDefault();
-            window.location.href = 'failed-page.html';
+            alert("ErroR: Not Found")
+            // window.location.href = 'failed-page.html';
         }
     });
 });
@@ -31,7 +32,8 @@ function handleSubmit(event) {
 
                 // Відповідно до значення transactionStatus відкриваємо відповідну сторінку
                 if (transactionStatus === 'failed') {
-                    window.location.href = 'failed-page.html';
+                    event.preventDefault();
+                    alert("ErroR: Not Found");
                 } else if (transactionStatus === 'pending') {
                     window.location.href = 'pending-page.html';
                 } else if (transactionStatus === 'success') {
