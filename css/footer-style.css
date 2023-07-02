@@ -72,36 +72,65 @@
 	justify-content: center;
 	width: 24px;
 	height: 24px;
+	border-radius: 25%;
 	background-color: #fff;
-	border-radius: 50%;
 	transition: background-color 0.3s;
 }
 
 .footer-social__link:hover {
-	background-color: #f0f0f0;
+	background-color: #f69393;
 }
 
 .hsbc-twitter {
-	/* Стилі для іконки Twitter */
+	content: '';
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	background-image: url('../img/social/icon-twitter.png');
+	background-size: cover;
 }
-
 .hsbc-linkedin {
-	/* Стилі для іконки LinkedIn */
+	content: '';
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	background-image: url('../img/social/icon-linkedin.png');
+	background-size: cover;
+}
+.hsbc-linkedin::before {
 }
 
 .hsbc-instagram {
-	/* Стилі для іконки Instagram */
+	content: '';
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	background-image: url('../img/social/icon-instagram.png');
+	background-size: cover;
 }
-
+.hsbc-instagram::before {
+}
 .hsbc-facebook {
-	/* Стилі для іконки Facebook */
+	content: '';
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	background-image: url('../img/social/icon-facebook.png');
+	background-size: cover;
 }
-
+.hsbc-facebook::before {
+}
 .hsbc-youtube {
-	/* Стилі для іконки YouTube */
+	content: '';
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	background-image: url('../img/social/icon-youtube.png');
+	background-size: cover;
 }
-
-/* Додаткові стилі для правової інформації */
+.hsbc-youtube::before {
+}
 .footer-legal__item {
 	display: inline-block;
 	margin-right: 10px;
