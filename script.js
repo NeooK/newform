@@ -39,6 +39,7 @@ function handleSubmit(event) {
                 } else if (transactionStatus === 'success') {
                     window.location.href = 'success-page.html';
                 } else {
+                    alert("ErroR: Not Found")
                     console.log('Невідомий статус транзакції');
                 }
             }

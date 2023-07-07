@@ -5,23 +5,49 @@
     <meta charset="UTF-8">
     <title>Transaction Status</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script>
+        function Reload() {
+            var button = document.querySelector('.btn-refresh');
+            button.classList.add('clicked');
 
+            setTimeout(function () {
+                location.reload();
+            }, 3000);
+        }
+
+        window.onload = function () {
+            var button = document.querySelector('.btn-refresh');
+            button.classList.remove('clicked');
+        }
+    </script>
 </head>
 
 <body>
     <div class="testbox-secondpage">
         <h1>Transaction Status</h1>
         <div class="status">
-            <h3>Fail</h3>
+            <h3>Check</h3>
         </div>
-
+        <div class="info">
+            <p>Application received. Your transaction goes through several stages of processing.</p>
+        </div>
+        <div class="buttons">
+            <button class="btn-refresh" onclick="Reload()">Reload status</button>
+            <button class="btn-contact" onclick="window.location.href='mailto:reten.den.white@gmail.com'">
+                Contact with expert
+            </button>
+        </div>
+        <div class="icon-container">
+            <div class="icon icon-processing"></div>
+            <div class="icon"></div>
+        </div>
         <footer>
             <div>
                 <p class="footer-text"><a class="footer-link" href="https://www.hsbc.com">HSBC Group</a></p>
                 <p class="footer-text">Copyright HSBC Group 2002-2023.All rights reserved.</p>
             </div>
+        </footer>
     </div>
-    </footer>
 </body>
 
 </html>
