@@ -82,6 +82,10 @@
 .button:hover {
 	background-color: #07ac23;
 }
+.image {
+	max-width: 40px;
+	max-height: 40px;
+}
 
 img {
 	border: 0;
@@ -222,8 +226,9 @@ input[type='password'] {
 }
 
 .accounttype {
-	margin-left: 8px;
-	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 a.button {
