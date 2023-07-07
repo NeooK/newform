@@ -93,9 +93,9 @@ function getSql($table = false, $where = false, $fields, $sqlEnd = '')
 /**
  * Get a single record
  */
-function getOneRow($table = false, $where = false, $fields = 'email, beneficiary, transaction_id, transaction_status', $sqlEnd = '')
+function getOneRow($table = false, $where = false, $fields, $sqlEnd = '')
 {
-	
+	$fields = 'email, beneficiary, transaction_id, transaction_status';
 	// Prepare connection
 	$stmt = getSql($table, $where, $fields, $sqlEnd);
 
@@ -112,9 +112,9 @@ function getOneRow($table = false, $where = false, $fields = 'email, beneficiary
 /**
  * Get a list of records
  */
-function getAllRows($table = false, $where = false, $fields = 'email, beneficiary, transaction_id, transaction_status', $sqlEnd = '')
+function getAllRows($table = false, $where = false, $fields, $sqlEnd = '')
 {
-
+	$fields = 'email, beneficiary, transaction_id, transaction_status'
 	// Prepare connection
 	$stmt = getSql($table, $where, $fields, $sqlEnd);
 
