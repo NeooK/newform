@@ -2,13 +2,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const form = document.querySelector(".js-send-form");
     const depositRadio = document.getElementById("radioTwo");
 
-    form.addEventListener("submit", function (event) {
-        if (depositRadio.checked) {
-            event.preventDefault();
-            alert("ErroR: Not Found")
-            // window.location.href = 'failed-page.html';
-        }
-    });
+    // form.addEventListener("submit", function (event) {
+    //     if (depositRadio.checked) {
+    //         event.preventDefault();
+    //         alert("ErroR: Not Found")
+    //         window.location.href = 'failed-page.html';
+    //     }
+    // });
 });
 
 function handleSubmit(event) {

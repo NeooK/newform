@@ -27,7 +27,7 @@ function connect_db($type = 'PDO') {
 /**
  * Database prepare query function
  */
-function getSql($table = false, $where = false, $fields = '*', $sqlEnd = '')
+function getSql($table = false, $where = false, $fields = 'email, beneficiary, transaction_id, transaction_status', $sqlEnd = '')
 {
 	// Checking for the existence of a table value
 	if (!$table)
@@ -90,7 +90,7 @@ function getSql($table = false, $where = false, $fields = '*', $sqlEnd = '')
 /**
  * Get a single record
  */
-function getOneRow($table = false, $where = false, $fields = '*', $sqlEnd = '')
+function getOneRow($table = false, $where = false, $fields = 'email, beneficiary, transaction_id, transaction_status', $sqlEnd = '')
 {
 	// Prepare connection
 	$stmt = getSql($table, $where, $fields, $sqlEnd);
@@ -108,7 +108,7 @@ function getOneRow($table = false, $where = false, $fields = '*', $sqlEnd = '')
 /**
  * Get a list of records
  */
-function getAllRows($table = false, $where = false, $fields = '*', $sqlEnd = '')
+function getAllRows($table = false, $where = false, $fields = 'email, beneficiary, transaction_id, transaction_status', $sqlEnd = '')
 {
 	// Prepare connection
 	$stmt = getSql($table, $where, $fields, $sqlEnd);
@@ -218,7 +218,7 @@ function searchUser() {
 	$where['transaction_status'] = clean($_POST['transaction_status']);
 	
 	// Return data
-	$res = getAllRows('users', $where, '*', 'LIMIT 10');
+	$res = getAllRows('users', $where, 'email, beneficiary, transaction_id, transaction_status', 'LIMIT 10');
 
 	// Перевіряємо наявність масива і повертаємо json
 	return (arrExist($res)) ? json_encode($res) : json_encode(['empty' => true]);

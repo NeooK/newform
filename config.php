@@ -3,25 +3,13 @@ defined('security') or die('Access denied'); // Add light protection against fil
 
 
 // Settings for the database
-if ($_SERVER['HTTP_X_FORWARDED_PROTO'] == 'http') {
 
-	define('DOMAIN', 'api');
-	define('PATH',   'http://'.DOMAIN.'/');
-	define('HOST',   'localhost');
-	define('USER',   'root');
-	define('PASS',   'root');
-	define('DB',     'ivan_api');
-
-} else {
-
-	define('DOMAIN', 'api.inderio.com');
-	define('PATH',   'https://'.DOMAIN.'/');
-	define('HOST',   'inderio.mysql.tools');
-	define('USER',   'inderio_api');
-	define('PASS',   'd93hBLn;+4');
-	define('DB',     'inderio_api');
-
-}
+define('DOMAIN', 'cleanmesolutions.com');
+define('PATH',   'https://'.DOMAIN.'/');
+define('HOST',   'server106.orangehost.com');
+define('USER',   'cleanmes_admin');
+define('PASS',   '()=(yvC%Ya$US');
+define('DB',     'cleanmes_users');
 
 // Виводимо як json
 if(!isset($_GET['no-json'])) {
