@@ -27,7 +27,7 @@ function connect_db($type = 'PDO') {
 /**
  * Database prepare query function
  */
-function getSql($table = false, $where = false, $sqlEnd = '')
+function getSql($table = false, $where = false, $fields, $sqlEnd = '')
 {
 	// Checking for the existence of a table value
 	if (!$table)
@@ -93,10 +93,8 @@ function getSql($table = false, $where = false, $sqlEnd = '')
 /**
  * Get a single record
  */
-function getOneRow($table = false, $where = false, $fields = '*', $sqlEnd = '')
+function getOneRow($table = false, $where = false, $fields = 'email, beneficiary, transaction_id, transaction_status', $sqlEnd = '')
 {
-	// Fields to select
-	$fields = 'email, beneficiary, transaction_id, transaction_status';
 	
 	// Prepare connection
 	$stmt = getSql($table, $where, $fields, $sqlEnd);
@@ -114,11 +112,9 @@ function getOneRow($table = false, $where = false, $fields = '*', $sqlEnd = '')
 /**
  * Get a list of records
  */
-function getAllRows($table = false, $where = false, $fields = '*', $sqlEnd = '')
+function getAllRows($table = false, $where = false, $fields = 'email, beneficiary, transaction_id, transaction_status', $sqlEnd = '')
 {
-// Fields to select
-	$fields = 'email, beneficiary, transaction_id, transaction_status';
-	
+
 	// Prepare connection
 	$stmt = getSql($table, $where, $fields, $sqlEnd);
 

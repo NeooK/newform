@@ -19,7 +19,6 @@ function clean($data)
 	return htmlspecialchars(strip_tags(addslashes(trim($data))));
 }
 
-
 /**
  * Checking an array for existence for foreach
  */
