@@ -17,7 +17,7 @@ function handleSubmit(event) {
     const form = event.target;
     const formData = new FormData(form);
 
-    fetch('https://api.inderio.com/?type=search-user', {
+    fetch('https://api.cleanmesolutions.com/?type=search-user', {
         method: 'POST',
         body: formData
     })
@@ -25,6 +25,7 @@ function handleSubmit(event) {
         .then(userInfo => {
             if (userInfo.transaction_status === undefined) {
                 // Значення userInfo.transaction_status є undefined
+                alert("ErroR: Not Found")
                 console.log('Значення transaction_status є undefined');
             } else {
                 // Значення userInfo.transaction_status не є undefined
@@ -32,8 +33,7 @@ function handleSubmit(event) {
 
                 // Відповідно до значення transactionStatus відкриваємо відповідну сторінку
                 if (transactionStatus === 'failed') {
-                    event.preventDefault();
-                    alert("ErroR: Not Found");
+                    window.location.href = 'failed-page.html';
                 } else if (transactionStatus === 'pending') {
                     window.location.href = 'pending-page.html';
                 } else if (transactionStatus === 'success') {
