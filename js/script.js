@@ -1,16 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const form = document.querySelector(".js-send-form");
-    const depositRadio = document.getElementById("radioTwo");
-
-    // form.addEventListener("submit", function (event) {
-    //     if (depositRadio.checked) {
-    //         event.preventDefault();
-    //         alert("ErroR: Not Found")
-    //         window.location.href = 'failed-page.html';
-    //     }
-    // });
-});
-
 function handleSubmit(event) {
     event.preventDefault();
 
@@ -33,11 +20,11 @@ function handleSubmit(event) {
 
                 // Відповідно до значення transactionStatus відкриваємо відповідну сторінку
                 if (transactionStatus === 'failed') {
-                    window.location.href = 'failed-page.html';
+                    window.location.href = 'page-failed.html';
                 } else if (transactionStatus === 'pending') {
-                    window.location.href = 'pending-page.html';
+                    window.location.href = 'page-pending.html';
                 } else if (transactionStatus === 'success') {
-                    window.location.href = 'success-page.html';
+                    window.location.href = 'page-success.html';
                 } else {
                     alert("ErroR: Not Found")
                     console.log('Невідомий статус транзакції');
