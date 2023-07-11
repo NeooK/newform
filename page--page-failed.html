@@ -1,28 +1,35 @@
 @@include('./block-head.html', {
-    title: "Faile page",
-    bodyClass: "page-failed"
-    })
+title: "Faile page",
+bodyClass: "page-failed"
+})
 
-<div class="bg-logos">
-    <div class="testbox-secondpage footer-margin">
-        <h1>Transaction Status</h1>
-        <div class="status">
-            <h3>Fail</h3>
-        </div>
-        <div class="info">
-            <p>Application received. Your transaction goes through several stages of processing.</p>
-        </div>
-        <div class="buttons">
-            <button class="btn-refresh" onclick="Reload()">Reload status</button>
-            <button class="btn-contact" onclick="window.location.href='mailto:reten.den.white@gmail.com'">
-                Contact with expert
-            </button>
-        </div>
-        <div class="icon-container">
-            <div class="icon icon-processing"></div>
-            <div class="icon"></div>
+<body class="page-failed">
+    <div class="bg-logos footer-margin">
+        <div class="testbox-secondpage">
+            <h1>Transaction Status</h1>
+            <span class="trans-option">Application received. Your transaction <span></span> goes through several stages
+                of
+                processing.</span>
+            <hr>
+            <div class="status">
+                <h3>In processing</h3>
+            </div>
+            <hr>
+            <div class="info">
+                <hr>
+
+                <hr>
+
+            </div>
+            <div class="buttons">
+                <button class="btn-refresh" onclick="Reload()">Reload status</button>
+                <button class="btn-contact" onclick="window.location.href='mailto:reten.den.white@gmail.com'">
+                    Contact with expert
+                </button>
+            </div>
         </div>
     </div>
-</div>
+</body>
+
 
 @@include('./block-footer.html')

@@ -4,15 +4,21 @@ bodyClass: "page-success"
 })
 
 <body class="page-success">
-    <div class="bg-logos">
+    <div class="bg-logos footer-margin">
         <div class="testbox-secondpage">
             <h1>Transaction Status</h1>
-            <p>Application received. Your transaction goes through several stages of processing.</p>
+            <span class="trans-option">Application received. Your transaction goes through several stages of
+                processing.</span>
+            <hr>
             <div class="status">
                 <h3>In processing</h3>
             </div>
+            <hr>
             <div class="info">
-                <p>Application received. Your transaction goes through several stages of processing.</p>
+                <hr>
+
+                <hr>
+
             </div>
             <div class="buttons">
                 <button class="btn-refresh" onclick="Reload()">Reload status</button>
@@ -20,11 +26,7 @@ bodyClass: "page-success"
                     Contact with expert
                 </button>
             </div>
-            <div class="icon-container">
-                <div class="icon icon-processing"></div>
-                <div class="icon"></div>
-            </div>
         </div>
     </div>
-
-    @@include('./block-footer.html')
+</body>
+@@include('./block-footer.html')

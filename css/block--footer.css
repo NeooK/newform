@@ -62,8 +62,7 @@
 	gap: 26px;
 	padding: 40px 0 32px;
 }
-.footer-social .footer-social__item {
-}
+
 .footer-social .footer-social__link {
 	--size-btn: 41px;
 	--size-fz: 20px;
@@ -120,10 +119,6 @@
 	font-size: 12px;
 }
 
-.footer-legal__item {
-}
-.footer-legal__item.footer-legal__item--copyright {
-}
 .footer-legal__item__icp {
 	display: flex;
 	flex-wrap: wrap;
