@@ -12,7 +12,7 @@ function handleSubmit(event) {
         .then(userInfo => {
             if (userInfo.transaction_status === undefined) {
                 // Значення userInfo.transaction_status є undefined
-                alert("ErroR: Not Found")
+                alert("Error: No Transaction reports found!")
                 console.log('Значення transaction_status є undefined');
             } else {
                 // Значення userInfo.transaction_status не є undefined

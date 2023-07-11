@@ -102,15 +102,15 @@ h3 {
 }
 
 .image {
-	max-width: 40px;
-	max-height: 40px;
+	max-width: 100px;
+	max-height: 100px;
+	display: inline-table;
 }
 
 .accounttype {
 	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	display: block;
+	text-align: center;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 	border-top: 1px solid rgba(0, 0, 0, 0.1);
 	padding: 10px 0;
