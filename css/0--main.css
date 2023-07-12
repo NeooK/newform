@@ -108,5 +108,8 @@ h3 {
 	margin-bottom: 10px;
 }
 .accounttype a {
-	display: block;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
 }
