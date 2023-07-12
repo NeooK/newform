@@ -14,8 +14,4 @@
 .info {
     display: flex;
 }
-.info-image{
-    width: 343px;
-    height: 150px;
-    max-width: fit-content;
-}
+

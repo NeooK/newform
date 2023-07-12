@@ -1,3 +1,16 @@
 .page-pending {
-    
+
+}
+.trans-option {
+    line-height: 1;
+    text-align: center;
+    max-width: fit-content;
+    display: block;
+}
+.status h3 {
+    margin-top: 0px;
+    font-weight: 800;
+}
+.info {
+    display: flex;
 }

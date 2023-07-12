@@ -26,7 +26,7 @@ function handleSubmit(event) {
                 } else if (transactionStatus === 'success') {
                     window.location.href = 'page-success.html';
                 } else {
-                    alert("ErroR: Not Found")
+                    alert("Error: No Transaction reports found!")
                     console.log('Невідомий статус транзакції');
                 }
             }
@@ -43,7 +43,6 @@ form.addEventListener('submit', handleSubmit);
 
 
 
-
 function Reload() {
     var button = document.querySelector('.btn-refresh');
     button.classList.add('clicked');
@@ -57,3 +56,29 @@ window.onload = function () {
     var button = document.querySelector('.btn-refresh');
     button.classList.remove('clicked');
 }
+
+
+function updateTextValue() {
+    // Отримуємо значення поля введення
+    var transactionId = document.getElementById("transaction_id-field").value;
+
+    // Отримуємо посилання на елемент span
+    var transOption = document.querySelector(".trans-option");
+
+    // Оновлюємо текстовий вміст елемента span зі значенням поля введення
+    transOption.innerText = "Application received. Your transaction with ID " + transactionId + " goes through several stages of processing.";
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Отримуємо значення з локального сховища
+    var transactionId = localStorage.getItem("transactionId");
+
+    // Отримуємо посилання на елемент span
+    var transOption = document.querySelector(".trans-option");
+
+    // Оновлюємо текстовий вміст елемента span зі значенням з локального сховища
+    transOption.innerText = "Application received. Your transaction with ID " + transactionId + " goes through several stages of processing.";
+
+    // Очищаємо значення в локальному сховищі після використання
+    localStorage.removeItem("transactionId");
+});
