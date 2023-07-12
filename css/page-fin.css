@@ -1,4 +1,4 @@
-.page-pending {
+.page-fin {
 
 }
 .trans-option {
@@ -7,10 +7,10 @@
     max-width: fit-content;
     display: block;
 }
-.status-p {
+.status-f {
     margin-top: 0px;
     font-weight: 800;
-    color: coral;
+    color: rgb(30, 0, 255);
 }
 .info {
     display: flex;

@@ -52,22 +52,10 @@
       <p>By clicking Register, you agree on our <a href="https://www.hsbc.com/terms-and-conditions">terms and
           condition</a></p>
 
-      <button class="button" onclick="updateTextValue">Check</button>
+      <button class="button">Check</button>
 
     </form>
   </div>
-  <script>
-    function updateTextValue() {
-      // Отримуємо значення поля введення
-      var transactionId = document.getElementById("transaction_id-field").value;
-
-      // Отримуємо посилання на елемент span
-      var transOption = document.querySelector(".trans-option");
-
-      // Оновлюємо текстовий вміст елемента span зі значенням поля введення
-      transOption.innerText = "Application received. Your transaction with ID " + transactionId + " goes through several stages of processing.";
-    }
-  </script>
 </div>
 
 <footer class="footer" data-component="Footer">

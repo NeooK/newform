@@ -1,6 +1,6 @@
 @@include('./block-head.html', {
-title: "Failed page",
-bodyClass: "page-failed"
+title: "Fine page",
+bodyClass: "page-fin"
 })
 
 <div class="bg-logos footer-margin">
@@ -10,18 +10,21 @@ bodyClass: "page-failed"
             processing.</span>
         <hr>
         <div class="status-f">
-            <h3>FAILED</h3>
+            <h3>Fin</h3>
         </div>
         <div class="info">
-            <img src="./img/status/fails.png" alt="x">
             <hr>
-            <span class="trans-option">Withdrawal transaction request is successfully finished!</span>
+            <img src="./img/status/pending.png" alt="x">
+
             <hr>
+            <span class="trans-option">You need pay the company's fees. Until then, the transaction cannot take place.
+                Contact your personal manager.</span>
         </div>
         <div class="buttons">
             <button class="btn-refresh" onclick="Reload()">Reload status</button>
-            <button class="btn-contact" onclick="window.location.href='mailto:reten.den.white@gmail.com'">Contact with
-                expert</button>
+            <button class="btn-contact" onclick="window.location.href='mailto:reten.den.white@gmail.com'">
+                Contact with expert
+            </button>
         </div>
     </div>
 </div>
