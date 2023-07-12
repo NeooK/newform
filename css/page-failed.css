@@ -7,7 +7,7 @@
     max-width: fit-content;
     display: block;
 }
-.status-p {
+.status-f {
     margin-top: 0px;
     font-weight: 800;
     color: red;
@@ -16,4 +16,8 @@
     display: flex;
     flex-direction: column;
     margin: 10px;
+}
+.akcent-f {
+    color: red;
+    font-weight: 600;
 }
