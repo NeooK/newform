@@ -1,0 +1,31 @@
+@@include('./block-head.html', {
+title: "Transaction report",
+bodyClass: "page-success"
+})
+
+<div class="bg-logos footer-margin">
+    <div class="testbox-secondpage">
+        <h1>Transaction Status</h1>
+        <span class="trans-option">Application received. Your transaction goes through several stages of
+            processing.</span>
+        <hr>
+        <div class="status-s">
+            <h3>COMPLITE</h3>
+        </div>
+        <div class="info">
+            <img src="./img/status/succes.png" alt="x">
+            <hr>
+            <span class="trans-option">Withdrawal transaction request is <span class="akcent-s">successfully</span>
+                finished!</span>
+            <hr>
+        </div>
+        <div class="buttons">
+            <button class="btn-refresh" onclick="Reload()">Reload status</button>
+            <button class="btn-contact" onclick="window.location.href='mailto:reten.den.white@gmail.com'">
+                Contact Us
+            </button>
+        </div>
+    </div>
+</div>
+
+@@include('./block-footer.html')

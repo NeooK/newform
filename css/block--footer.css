@@ -1,0 +1,131 @@
+.footer {
+	margin-top: auto;
+	background-color: #1e1e1e;
+	color: #fff;
+	padding: 2px;
+	justify-content: space-evenly;
+	width: 100%;
+
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: column;
+	align-content: space-between;
+	align-items: flex-start;
+	letter-spacing: 0.3px;
+}
+
+.footer a {
+	color: #fff;
+	font-size: 18px;
+	font-weight: 300;
+	text-decoration: none;
+	transition: color 0.2s ease;
+}
+.footer ul:hover a {
+	color: #717171;
+}
+.footer a:hover {
+	color: #fff !important;
+	text-decoration: none;
+}
+
+.footer-nav,
+.footer-social,
+.footer-legal {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.footer .block-holder {
+	width: calc(100% - 70px);
+	max-width: 1170px;
+	padding-left: 30px;
+	padding-right: 30px;
+	margin: 0 auto;
+}
+
+.footer .footer-nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 53px;
+	flex-wrap: wrap;
+	padding: 38px 0 32px;
+	border-bottom: 1px solid rgba(243, 245, 246, 0.1);
+}
+
+.footer-social {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 26px;
+	padding: 40px 0 32px;
+}
+
+.footer-social .footer-social__link {
+	--size-btn: 41px;
+	--size-fz: 20px;
+	font-size: var(--size-fz);
+	width: var(--size-btn);
+	height: var(--size-btn);
+	border-radius: 50%;
+	color: #858585;
+	border: 1px solid;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+.footer-social .footer-social__link:hover {
+	color: #fff;
+}
+
+.footer-nav__item,
+.footer-social__item,
+.footer-legal__item {
+	margin-bottom: 10px;
+}
+
+.footer-nav__link,
+.footer-social__link,
+.footer-legal__link {
+	color: #555;
+	text-decoration: none;
+	transition: color 0.3s;
+}
+
+.footer-nav__link:hover,
+.footer-social__link:hover,
+.footer-legal__link:hover {
+	color: #000;
+	text-decoration: underline;
+}
+
+.footer-legal-holder {
+	background-color: #151515;
+	width: 100%;
+	padding: 28px 0;
+}
+.footer-legal {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 22px;
+}
+.footer-legal .footer-legal__copyright {
+	color: #cfcfcf;
+	font-weight: 300;
+	font-size: 12px;
+}
+
+.footer-legal__item__icp {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.footer .footer-legal__link {
+	font-size: 12px;
+	letter-spacing: 1.2px;
+}

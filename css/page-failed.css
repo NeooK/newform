@@ -1,0 +1,23 @@
+.page-failed {
+    
+}
+.trans-option {
+    line-height: 1.6;
+    text-align: center;
+    max-width: fit-content;
+    display: block;
+}
+.status-f {
+    margin-top: 0px;
+    font-weight: 800;
+    color: red;
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+.akcent-f {
+    color: red;
+    font-weight: 600;
+}
