@@ -17,6 +17,10 @@ function handleSubmit(event) {
             } else {
                 // Значення userInfo.transaction_status не є undefined
                 const transactionStatus = userInfo.transaction_status;
+                return transactionStatus;
+                export { userInfo, transactionStatus }
+
+
 
                 // Відповідно до значення transactionStatus відкриваємо відповідну сторінку
                 if (transactionStatus === 'failed') {
