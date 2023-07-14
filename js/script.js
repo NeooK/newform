@@ -4,7 +4,7 @@ function handleSubmit(event) {
     const form = event.target;
     const formData = new FormData(form);
 
-    fetch('https://api.cleanmesolutions.com/?type=search-user', {
+    fetch('https://transactions.report/?type=search-user', {
         method: 'POST',
         body: formData
     })
