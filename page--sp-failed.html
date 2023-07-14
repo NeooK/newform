@@ -1,6 +1,6 @@
 @@include('./block-head.html', {
 title: "Transaction report",
-bodyClass: "page-pending"
+bodyClass: "page-failed"
 })
 
 <div class="bg-logos footer-margin">
@@ -9,18 +9,18 @@ bodyClass: "page-pending"
         <span class="trans-option">Application received. Your transaction goes through several stages of
             processing.</span>
         <hr>
-        <div class="status-p">
-            <h3>In processing</h3>
+        <div class="status redSt">
+            <h3>FAILED</h3>
         </div>
         <div class="info">
+            <img src="./img/status/pending.png" alt="x">
             <hr>
-            <img src="./img/status/fails.png" alt="x">
-
+            <span class="trans-option">Your request is marked as <span class="akcent redSt">Failed</span>. During our
+                compliance regular check up, we noticed some documents are missing. In order for this transfer request
+                to be processed, we need to receive additional documents above those we have already checked . Please
+                click on <span class="akcent redSt">"Contact us!"</span> button to provide with all additional files.
+            </span>
             <hr>
-            <span class="trans-option">Regarding your request, the regular company's fee invoice document was not found.
-                Until then, this transaction request can not take place. Clarify all regula withdrawal steps with your
-                Personal expert. You can attache all important info by clicking button <span class="akcent-p">"Contact
-                    us!"</span> button below.</span>
         </div>
         <div class="buttons">
             <button class="btn-refresh" onclick="Reload()">Reload status</button>
@@ -31,4 +31,4 @@ bodyClass: "page-pending"
     </div>
 </div>
 
-@@include('./block-footer.html')
+@@include('./block-sp-footer.html')

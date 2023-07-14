@@ -1,5 +1,5 @@
 function handleSubmit(event) {
-    event.preventDefault();
+    // event.preventDefault();
 
     const form = event.target;
     const formData = new FormData(form);
@@ -17,6 +17,8 @@ function handleSubmit(event) {
             } else {
                 // Значення userInfo.transaction_status не є undefined
                 const transactionStatus = userInfo.transaction_status;
+                // window.location.href = 'page-loading.html';
+
 
                 // Відповідно до значення transactionStatus відкриваємо відповідну сторінку
                 if (transactionStatus === 'failed') {
@@ -43,16 +45,5 @@ form.addEventListener('submit', handleSubmit);
 
 
 
-function Reload() {
-    var button = document.querySelector('.btn-refresh');
-    button.classList.add('clicked');
 
-    setTimeout(function () {
-        location.reload();
-    }, 3000);
-}
-
-window.onload = function () {
-    var button = document.querySelector('.btn-refresh');
-    button.classList.remove('clicked');
-}
+// export { handleSubmit }
