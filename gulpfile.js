@@ -18,6 +18,7 @@ gulp.task('html', function () {
 
 gulp.task('watch', function () {
     gulp.watch('page--*.html', gulp.series('html'));
+    gulp.watch('block-*.html', gulp.series('html'));
 });
 
 gulp.task('default', gulp.series('html', 'watch'));

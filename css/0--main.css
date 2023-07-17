@@ -64,6 +64,10 @@ h3 {
 	flex-wrap: wrap;
 }
 
+.hide {
+	display: none !important;
+}
+
 .bg-logos {
 	position: relative;
 }

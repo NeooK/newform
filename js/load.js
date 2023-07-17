@@ -1,25 +1,24 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const spb = new SegmentedProgress(".sp", ".status");
-});
-
 class SegmentedProgress {
-    constructor(svgQS, statusQS) {
+    constructor(svgQS, statusQS, userInfo) {
         this.svgEl = document.querySelector(svgQS);
         this.statusEl = document.querySelector(statusQS);
         this.pct = 0;
         this.part = 0;
         this.parts = 4;
         this.timeout = null;
+        this.userInfo = userInfo;
+
+        document.querySelector('#js-loading-box').classList.remove('hide');
 
         this.init();
 
         let resetBtn = document.getElementById("reset");
         if (resetBtn)
-            resetBtn.addEventListener("click", this.reset.bind(this));
+            resetBtn.addEventListener("click", handleSubmit);
     }
     init() {
         this.updateStatus("Waiting…");
-        this.timeout = setTimeout(this.nextPart.bind(this), 750);
+        this.timeout = setTimeout(this.nextPart.bind(this), 500);
     }
     reset() {
         this.pct = 0;
@@ -92,10 +91,29 @@ class SegmentedProgress {
         this.fillCircle(this.part);
         // display the message
         let msg = "";
-        if (this.part < this.parts)
+        if (this.part < this.parts) {
             msg = `Verifyng data ${this.part}/${this.parts - 1}…`;
-        else
+
+        } else {
             msg = "Complete!";
+
+            setTimeout(() => {
+                // Значення this.userInfo.transaction_status не є undefined
+                const transactionStatus = this.userInfo.transaction_status;
+
+                // Відповідно до значення transactionStatus відкриваємо відповідну сторінку
+                if (transactionStatus === 'failed') {
+                    window.location.href = 'sp-failed.html';
+                } else if (transactionStatus === 'pending') {
+                    window.location.href = 'sp-pending.html';
+                } else if (transactionStatus === 'success') {
+                    window.location.href = 'sp-success.html';
+                } else {
+                    alert("Error: No Transaction reports found!")
+                    console.log('Невідомий статус транзакції');
+                }
+            }, 1000);
+        }
 
         this.updateStatus(msg);
         // delay for next bar

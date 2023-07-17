@@ -21,15 +21,51 @@
         type='text/css'>
     <link href="https://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="css/page-loading.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body class="page-home">
 
+    <div id="js-loading-box" class="box-loading hide">
+    <svg class="sp" width="204px" height="24px" viewBox="0 0 204 24" xmlns="http://www.w3.org/2000/svg">
+        <!-- Part 1 -->
+        <circle data-dot="1" class="sp__dot" cx="12" cy="12" r="0" fill="#000" />
+        <line class="sp__bar" x1="22" y1="12" x2="62" y2="12" fill="none" stroke="#000" stroke-width="4" />
+        <circle data-hub="1" class="sp__hub" cx="12" cy="12" r="2" fill="none" stroke="#000" stroke-width="4" />
+        <line data-bar="1" class="sp__bar-fill" x1="22" y1="12" x2="62" y2="12" fill="none" stroke="#000"
+            stroke-width="4" />
+        <circle data-hub-fill="1" class="sp__hub-fill" cx="12" cy="12" r="10" fill="none" stroke-width="4"
+            transform="rotate(180,12,12)" />
+        <!-- Part 2 -->
+        <circle data-dot="2" class="sp__dot" cx="72" cy="12" r="0" fill="#000" />
+        <line class="sp__bar" x1="82" y1="12" x2="122" y2="12" fill="none" stroke="#000" stroke-width="4" />
+        <circle data-hub="2" class="sp__hub" cx="72" cy="12" r="2" fill="none" stroke="#000" stroke-width="4" />
+        <line data-bar="2" class="sp__bar-fill" x1="82" y1="12" x2="122" y2="12" fill="none" stroke="#000"
+            stroke-width="4" />
+        <circle data-hub-fill="2" class="sp__hub-fill" cx="72" cy="12" r="10" fill="none" stroke-width="4"
+            transform="rotate(180,72,12)" />
+        <!-- Part 3 -->
+        <circle data-dot="3" class="sp__dot" cx="132" cy="12" r="0" fill="#000" />
+        <line class="sp__bar" x1="142" y1="12" x2="182" y2="12" fill="none" stroke="#000" stroke-width="4" />
+        <circle data-hub="3" class="sp__hub" cx="132" cy="12" r="2" fill="none" stroke="#000" stroke-width="4" />
+        <line data-bar="3" class="sp__bar-fill" x1="142" y1="12" x2="182" y2="12" fill="none" stroke="#000"
+            stroke-width="4" />
+        <circle data-hub-fill="3" class="sp__hub-fill" cx="132" cy="12" r="10" fill="none" stroke-width="4"
+            transform="rotate(180,132,12)" />
+        <!-- Part 4 -->
+        <circle data-dot="4" class="sp__dot" cx="192" cy="12" r="0" fill="#000" />
+        <circle data-hub="4" class="sp__hub" cx="192" cy="12" r="2" fill="none" stroke="#000" stroke-width="4" />
+        <circle data-hub-fill="4" class="sp__hub-fill" cx="192" cy="12" r="10" fill="none" stroke-width="4"
+            transform="rotate(180,192,12)" />
+    </svg>
+    <p class="status"></p>
+</div>
+
 <div class="bg-logos">
   <div class="testbox footer-margin">
     <h1>Transaction status</h1>
-    <form action="/" class="js-send-form">
+    <form action="loading.html" class="js-send-form">
 
       <div class="accounttype">
         <a href="https://www.hsbc.com/"><img src="./img/logo.svg" class="image" alt="x"></a>
@@ -37,23 +73,24 @@
 
       <div class="box-input">
         <label id="icons-field" for="email-field"><i class="icon-envelope"></i></label>
-        <input value="" type="text" name="email" class="form-input" id="email-field" placeholder="Email" required />
+        <input value="test@gmail.com" type="text" name="email" class="form-input" id="email-field" placeholder="Email"
+          required />
       </div>
       <div class="box-input">
         <label id="icons-field" for="beneficiary-field"><i class="icon-user"></i></label>
-        <input value="" type="text" name="beneficiary" class="form-input" id="beneficiary-field"
+        <input value="Test" type="text" name="beneficiary" class="form-input" id="beneficiary-field"
           placeholder="Beneficiary" required />
       </div>
       <div class="box-input">
         <label id="icons-field" for="transaction_id-field"><i class="icon-shield"></i></label>
-        <input value="" type="text" name="transaction_id" class="form-input" id="transaction_id-field"
+        <input value="12345" type="text" name="transaction_id" class="form-input" id="transaction_id-field"
           placeholder="Transaction ID" required />
       </div>
 
       <p>By clicking Register, you agree on our <a href="https://www.hsbc.com/terms-and-conditions">terms and
           condition</a></p>
 
-      <button class="submit">Check</button>
+      <button id="submit" class="submit">Check</button>
 
     </form>
   </div>
@@ -170,6 +207,7 @@
 </footer>
 
 <script src="js/script.js"></script>
+<script src="js/load.js"></script>
 
 </body>
 

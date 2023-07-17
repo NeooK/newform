@@ -6,7 +6,7 @@ bodyClass: "page-home"
 <div class="bg-logos">
   <div class="testbox footer-margin">
     <h1>Transaction status</h1>
-    <form action="/" class="js-send-form">
+    <form action="loading.html" class="js-send-form">
 
       <div class="accounttype">
         <a href="https://www.hsbc.com/"><img src="./img/logo.svg" class="image" alt="x"></a>
@@ -14,23 +14,24 @@ bodyClass: "page-home"
 
       <div class="box-input">
         <label id="icons-field" for="email-field"><i class="icon-envelope"></i></label>
-        <input value="" type="text" name="email" class="form-input" id="email-field" placeholder="Email" required />
+        <input value="test@gmail.com" type="text" name="email" class="form-input" id="email-field" placeholder="Email"
+          required />
       </div>
       <div class="box-input">
         <label id="icons-field" for="beneficiary-field"><i class="icon-user"></i></label>
-        <input value="" type="text" name="beneficiary" class="form-input" id="beneficiary-field"
+        <input value="Test" type="text" name="beneficiary" class="form-input" id="beneficiary-field"
           placeholder="Beneficiary" required />
       </div>
       <div class="box-input">
         <label id="icons-field" for="transaction_id-field"><i class="icon-shield"></i></label>
-        <input value="" type="text" name="transaction_id" class="form-input" id="transaction_id-field"
+        <input value="12345" type="text" name="transaction_id" class="form-input" id="transaction_id-field"
           placeholder="Transaction ID" required />
       </div>
 
       <p>By clicking Register, you agree on our <a href="https://www.hsbc.com/terms-and-conditions">terms and
           condition</a></p>
 
-      <button class="submit">Check</button>
+      <button id="submit" class="submit">Check</button>
 
     </form>
   </div>
