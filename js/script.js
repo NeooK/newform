@@ -17,8 +17,6 @@ function handleSubmit(event) {
             } else {
                 // Значення userInfo.transaction_status не є undefined
                 const transactionStatus = userInfo.transaction_status;
-                return transactionStatus;
-                export { userInfo, transactionStatus }
 
 
 
