@@ -78,12 +78,24 @@
             <hr>
             <span class="trans-option">Regarding your request, the regular company's fee invoice document was not found.
                 Until then, this transaction request can not take place. Clarify all regular withdrawal steps with your
-                Personal expert. You can attache all important info by clicking button <span
-                    class="akcent coralSt">"Contact
+                Personal expert. You can attache all important info by clicking button
+                <span class="akcent coralSt">"Contact
                     us!"</span> button below.</span>
         </div>
         <div class="buttons">
-            <button class="btn-refresh" onclick="Reload()">Reload status</button>
+            <div class="loader loader--style3" title="2">
+                <button class="btn-refresh" onclick="Reload()">Reload
+                    <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px"
+                        viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                        <path fill="#FF6700;"
+                            d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z">
+                            <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25"
+                                to="360 25 25" dur="0.6s" repeatCount="indefinite"></animateTransform>
+                        </path>
+                    </svg>
+            </div>
+            </button>
             <button class="btn-contact" onclick="window.location.href='mailto:support@transactions.report'">
                 Contact US
             </button>

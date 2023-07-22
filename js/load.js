@@ -92,7 +92,7 @@ class SegmentedProgress {
         // display the message
         let msg = "";
         if (this.part < this.parts) {
-            msg = `Verifyng data ${this.part}/${this.parts - 1}…`;
+            msg = `Verifying data ${this.part}/${this.parts - 1}…`;
 
         } else {
             msg = "Complete!";

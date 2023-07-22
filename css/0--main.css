@@ -30,6 +30,7 @@ a {
 
 svg {
 	--size: 1em;
+	--sizeB: 3em;
 	position: relative;
 	height: var(--size);
 	width: var(--size);

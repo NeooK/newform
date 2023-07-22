@@ -83,6 +83,8 @@
   font-size: inherit !important;
   margin-bottom: 4.5em;
   text-align: center;
+  font-weight: 600;
+  color: #F42525;
 }
 
 @media (prefers-color-scheme: white) {
